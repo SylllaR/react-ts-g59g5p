@@ -2,7 +2,6 @@ import * as React from 'react';
 import classNames from 'classnames/bind';
 import styles from './style.module.scss';
 import { VegeterianIcon, PorkIcon, BeefIcon } from '../../img';
-import { BrushButton } from '../';
 
 const cx = classNames.bind(styles);
 
@@ -50,9 +49,10 @@ export const Card: React.FC<CardProps> = ({
             </div>
           ))}
       </div>
-      {/*<div className={cx('card-btn')}>
-        <BrushButton title={`${price} грн / ${weight} г`} />
-          </div>*/}
+      <div className={cx('card-price')}>
+        <span>{price} грн</span>
+        <span>{weight} г</span>
+      </div>
     </div>
   );
 };

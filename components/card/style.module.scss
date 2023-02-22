@@ -27,11 +27,6 @@
       height: px-to-rem(200);
     }
   }
-  &-btn {
-    margin-top: px-to-rem(10);
-    display: flex;
-    justify-content: center;
-  }
   &-icons {
     margin-top: px-to-rem(10);
     display: flex;
@@ -44,5 +39,10 @@
     width: px-to-rem(30);
     height: px-to-rem(30);
     cursor: pointer;
+  }
+  &-price {
+    display: flex;
+    justify-content: space-around;
+    color: $color-text-white;
   }
 }

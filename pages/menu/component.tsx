@@ -102,7 +102,7 @@ export const MenuPage: React.FC<Props> = ({ groups, productList }) => {
                       img={item.img}
                       price={item.price}
                       weight={item.weight}
-                      //properties={item.properties}
+                      properties={item.properties?.split(' ')}
                       onClick={() => {
                         openModal(item.id);
                       }}
