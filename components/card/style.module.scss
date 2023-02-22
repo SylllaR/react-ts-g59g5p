@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: px-to-rem(300);
+  height: px-to-rem(300);
+  background-color: $color-gray;
+  border-radius: px-to-rem(15);
+  padding: px-to-rem(15);
+  box-sizing: border-box;
+  &-title {
+    font-size: px-to-rem(18);
+    color: $color-text-white;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: $color-red;
+    }
+  }
+  &-img {
+    width: 100%;
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: px-to-rem(270);
+      height: px-to-rem(200);
+    }
+  }
+  &-btn {
+    margin-top: px-to-rem(10);
+    display: flex;
+    justify-content: center;
+  }
+  &-icons {
+    margin-top: px-to-rem(10);
+    display: flex;
+    flex-direction: row;
+    gap: px-to-rem(15);
+    height: px-to-rem(30);
+    width: 100%;
+  }
+  &-icon {
+    width: px-to-rem(30);
+    height: px-to-rem(30);
+    cursor: pointer;
+  }
+}

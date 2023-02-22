@@ -1,0 +1,121 @@
+@import '../../styles/variables';
+
+.cart-modal {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  height: calc(100vh - 60px);
+  width: px-to-rem(500);
+  background-color: black;
+  border: px-to-rem(2) solid white;
+  box-sizing: border-box;
+  z-index: 999;
+
+  &-close {
+    position: absolute;
+    top: px-to-rem(20);
+    left: px-to-rem(-78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: px-to-rem(80);
+    height: px-to-rem(80);
+    background-color: #000000;
+    transform: rotate(-5deg);
+
+    &-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      & svg {
+        color: $color-white;
+      }
+    }
+    &-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: px-to-rem(50);
+      height: px-to-rem(50);
+      background-color: transparent;
+      border: none;
+      z-index: 1;
+      cursor: pointer;
+      & svg {
+        color: $color-white;
+      }
+      &:hover {
+        svg {
+          color: $color-red;
+          transition: color 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+.bkg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 700;
+  overflow: hidden;
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  &-header {
+    color: $color-text-white;
+    font-size: px-to-rem(30);
+    margin-bottom: px-to-rem(15);
+    z-index: 1500;
+  }
+  &-propose {
+    color: $color-text-white;
+    font-size: px-to-rem(20);
+    margin-bottom: px-to-rem(40);
+    z-index: 1500;
+  }
+  &-bkg {
+    position: absolute;
+    width: 90%;
+    & svg {
+      color: rgba($color: white, $alpha: 0.05);
+    }
+  }
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.cards-container {
+  width: 95%;
+  max-height: 75vh;
+  margin-bottom: 3%;
+  overflow-y: auto;
+}
+
+.cart-header {
+  color: $color-text-white;
+  font-size: px-to-rem(30);
+  margin: 3% 0;
+  z-index: 1500;
+}

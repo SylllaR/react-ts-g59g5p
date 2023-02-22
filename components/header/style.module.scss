@@ -1,0 +1,100 @@
+@import '../../styles/variables';
+
+.header-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: px-to-rem(15);
+  z-index: 1000;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: px-to-rem(1200);
+  width: 100%;
+  margin: auto;
+}
+.logo-container {
+  width: px-to-rem(150);
+  margin-top: px-to-rem(-7);
+}
+.nav {
+  &-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: px-to-rem(15);
+  }
+  &-link {
+    color: white;
+    text-decoration: none;
+    font-size: px-to-rem(20);
+    font-weight: 700;
+    letter-spacing: px-to-rem(1);
+    background-image: linear-gradient(
+      to left,
+      $color-red,
+      $color-red 50%,
+      $color-white 50%
+    );
+    background-size: 200% 100%;
+    background-position: 0;
+    display: inline-block;
+    padding: px-to-rem(5) 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus-visible {
+      background-position: -100%;
+    }
+
+    &.active {
+      background-image: none;
+      -webkit-text-fill-color: $color-red;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: px-to-rem(10);
+  }
+}
+
+.cart-btn {
+  position: relative;
+  width: px-to-rem(24);
+  height: px-to-rem(24);
+  margin: 0 px-to-rem(15);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  & svg {
+    color: $color-text-white;
+  }
+  &-mark {
+    position: absolute;
+    top: px-to-rem(-5);
+    right: px-to-rem(-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: px-to-rem(20);
+    border: px-to-rem(2) solid $color-white;
+    width: px-to-rem(15);
+    height: px-to-rem(15);
+    background-color: $color-red;
+    font-size: px-to-rem(10);
+    color: $color-text-white;
+  }
+}

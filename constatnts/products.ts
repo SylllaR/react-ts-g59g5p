@@ -1,0 +1,5 @@
+export enum GetProducts {
+  FETCH = 'GET_PRODUCTS_FETCH',
+  SUCCESS = 'GET_PRODUCTS_SUCCES',
+  ERROR = 'GET_PRODUCTS_ERROR',
+}
