@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: px-to-rem(300);
@@ -43,9 +44,23 @@
     cursor: pointer;
   }
   &-price {
+    position: absolute;
+    bottom: px-to-rem(15);
+    right: px-to-rem(15);
     display: flex;
-    justify-content: space-around;
-    color: $color-text-white;
+    flex-direction: column;
+    align-items: center;
+
+    &-value {
+      color: $color-red;
+      font-family: Edo;
+      font-size: px-to-rem(35);
+      margin-bottom: px-to-rem(-3);
+    }
+    &-currency {
+      color: $color-text-white;
+      font-weight: bolder;
+    }
   }
 }
 

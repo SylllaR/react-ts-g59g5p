@@ -51,7 +51,9 @@ export const Card: React.FC<CardProps> = ({
         />
         {!isLoadImg && <LoaderImg />}
       </div>
-      <span className={cx('card-title')}>{name}, {weight}г</span>
+      <span className={cx('card-title')}>
+        {name}, {weight}г
+      </span>
       <div className={cx('card-icons')}>
         {properties &&
           properties.map((item) => (
@@ -61,7 +63,8 @@ export const Card: React.FC<CardProps> = ({
           ))}
       </div>
       <div className={cx('card-price')}>
-        <span>{price} грн</span>
+        <p className={cx('card-price-value')}>{price}</p>
+        <p className={cx('card-price-currency')}>грн</p>
       </div>
     </div>
   );
