@@ -14,3 +14,4 @@ export { default as SadSmile } from './sad-smile';
 export { default as DeleteIcon } from './delete';
 export { default as MinusIcon } from './minus';
 export { default as PlusIcon } from './plus';
+export { default as ImgIcon } from './img-icon';

@@ -49,7 +49,7 @@ export const Card: React.FC<CardProps> = ({
           src={img}
           alt={`${name} pic`}
         />
-        {!isLoadImg && <LoadImg />}
+        {!isLoadImg && <LoaderImg />}
       </div>
       <span className={cx('card-title')}>{name}</span>
       <div className={cx('card-icons')}>
