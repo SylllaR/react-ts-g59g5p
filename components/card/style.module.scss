@@ -13,6 +13,7 @@
     font-size: px-to-rem(18);
     color: $color-text-white;
     transition: color 0.2s ease-in;
+    height: px-to-rem(44);
     &:hover {
       color: $color-red;
     }
