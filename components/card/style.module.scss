@@ -6,7 +6,7 @@
   width: px-to-rem(300);
   height: px-to-rem(300);
   background-color: $color-gray;
-  border-radius: px-to-rem(15);
+  border: 1px solid #fff;
   padding: px-to-rem(15);
   box-sizing: border-box;
   &-title {
@@ -26,7 +26,7 @@
       align-items: center;
       justify-content: center;
       width: px-to-rem(270);
-      height: px-to-rem(200);
+      height: px-to-rem(170);
     }
   }
   &-icons {
