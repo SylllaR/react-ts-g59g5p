@@ -2,6 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames/bind';
 import styles from './style.module.scss';
 import { VegeterianIcon, PorkIcon, BeefIcon } from '../../img';
+import { LoaderImg } from '../../components';
 
 const cx = classNames.bind(styles);
 
@@ -24,6 +25,8 @@ export const Card: React.FC<CardProps> = ({
   properties,
   onClick,
 }) => {
+  const [isLoadImg, setIsLoadImg] = React.useState(false);
+
   const setIcons = (prop: string) => {
     switch (prop) {
       case 'vegeterian':
@@ -38,7 +41,15 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div className={cx('card')} onClick={onClick}>
       <div className={cx('card-img-container')}>
-        <img className={cx('card-img')} src={img} alt={`${name} pic`} />
+        <img
+          className={cx('card-img', { opacity: !isLoadImg })}
+          onLoad={() => {
+            setIsLoadImg(true);
+          }}
+          src={img}
+          alt={`${name} pic`}
+        />
+        {!isLoadImg && <LoadImg />}
       </div>
       <span className={cx('card-title')}>{name}</span>
       <div className={cx('card-icons')}>

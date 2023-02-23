@@ -6,3 +6,4 @@ export { default as LangSelector } from './lang-selector';
 export { default as CartModal } from './cart-modal';
 export { default as CartCard } from './cart-card';
 export { default as Loader } from './loader';
+export { default as LoaderImg } from './loader-img';
